@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/index.css">
+    <style>
+        .topic {
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            padding: 5%;
+            margin: 5%;
+            background-color: rgba(174, 221, 248, 0.322);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">CourseMap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CoursesLandingPage.html">Courses</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CodeEditor.html">Code Editor</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="exec">Node JS</h1>
+
+    <div id="content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <script src="/CourseData/NodeJs.js"></script>
+    <script>
+        // JavaScript code to generate HTML content
+        document.addEventListener("DOMContentLoaded", function () {
+            const contentDiv = document.getElementById("content");
+
+            convertedHTML.forEach(topic => {
+                const topicDiv = document.createElement("div");
+                topicDiv.classList.add("topic");
+
+                const topicHeader = document.createElement("h2");
+                topicHeader.textContent = topic.topic_name;
+
+                const topicDescription = document.createElement("p");
+                topicDescription.textContent = topic.topic_description;
+
+                const subtopicsList = document.createElement("ul");
+                topic.subtopics.forEach(subtopic => {
+                    const subtopicItem = document.createElement("li");
+                    subtopicItem.innerHTML = `<strong>${subtopic.subtopic_name}</strong><br>${subtopic.example_code}`;
+                    subtopicsList.appendChild(subtopicItem);
+                });
+
+                topicDiv.appendChild(topicHeader);
+                topicDiv.appendChild(topicDescription);
+                topicDiv.appendChild(subtopicsList);
+
+                contentDiv.appendChild(topicDiv);
+            });
+        });
+    </script>
+    
+    <footer class="footer-1 bg-primary text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h5>About Us</h5>
+                    <p>We provide cheatsheets and live paid training to enhance your learning experience.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact Us</h5>
+                    <p>Email: contact@coursemap.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Location</h5>
+                    <p>123 Main Street</p>
+                    <p>City, Country</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer bg-primary text-white text-center py-3">
+        <div class="container">
+            <span class="text-white">Course Map &copy; 2024 - Providing cheatsheets and live paid training.</span>
+        </div>
+    </footer>
+</body>
+
+</html>

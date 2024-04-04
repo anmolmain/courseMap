@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Topics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .card {
+            background-color: rgba(174, 221, 248, 0.322);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .courseImg {
+            margin: auto;
+        }
+
+        .card-body img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .card-text {
+            text-align: justify;
+        }
+
+        .btn {
+            margin-top: auto;
+        }
+
+        .card {
+            width: 90vw;
+            display: flex;
+            flex-direction: row;
+            padding: 10%;
+        }
+
+        .card-title {
+            text-align: center;
+        }
+        .mcontainer{
+            width: 100vw;
+            display: flex;
+        }
+        .mcontainer .row{
+            margin: auto;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">CourseMap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CoursesLandingPage.html">Courses</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CodeEditor.html">Code Editor</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mcontainer">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h1 class="text-center mb-4 exec" style="width: 90vw;">Web Development Topics</h1>
+                <div id="topics-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="webDevelopmentTopics.js"></script>
+    <script>
+        // Function to generate HTML for each topic card
+        function generateTopicCard(topic) {
+            return `
+        <div class="card">
+          <div class="card-body">
+            <img id=courseImg src="${topic.url}" alt="Topic Image">
+            <div>
+              <h5 class="card-title">${topic.topic}</h5>
+              <button class="btn btn-primary" onclick="showTopicName('${topic.topic}')">Learn More</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">${topic.description}</p>
+          </div>
+        </div>
+      `;
+        }
+
+        // Function to display topics in the HTML page
+        function displayTopics(topics) {
+            const topicsContainer = document.getElementById('topics-container');
+            topicsContainer.innerHTML = topics.map(topic => generateTopicCard(topic)).join('');
+        }
+
+        // Function to show the topic name in an alert
+        function showTopicName(topicName) {
+            let str=topicName+'.html'
+            window.open(str,"_blank");
+        }
+
+        // Import topics data from the JavaScript file
+        // Ensure this line is executed after the HTML page is loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            displayTopics(webDevelopmentTopics);
+        });
+    </script>
+    
+    <footer class="footer-1 bg-primary text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h5>About Us</h5>
+                    <p>We provide cheatsheets and live paid training to enhance your learning experience.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact Us</h5>
+                    <p>Email: contact@coursemap.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Location</h5>
+                    <p>123 Main Street</p>
+                    <p>City, Country</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer bg-primary text-white text-center py-3">
+        <div class="container">
+            <span class="text-white">Course Map &copy; 2024 - Providing cheatsheets and live paid training.</span>
+        </div>
+    </footer>
+</body>
+
+</html>
