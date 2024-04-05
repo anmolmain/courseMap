@@ -1,0 +1,77 @@
+Common asking question on your website
+
+1. Explain your Website ?
+
+This website is based upon online study platform. 
+On this platform user can access mutiple courses and imporove their coding skills 
+they can also use the inbuilt coding editor that helps them to code. 
+at last the can make a query if someone does'nt like the website to imporve 
+customer support . 
+ 
+2. how you hosted this website ?
+
+this website is hosted on netlify cloud service,
+netlify propvide us a ( paas )  service which means platform as an service
+In this we can host our website for free or even we can buy an domain.
+
+3. what type of technonlogy you used in this website ?
+
+In this website I use technologies like html, css , javascript and also bootstrap
+html: for structure of website
+css: to make it beautiful 
+js: to make it working or functioning
+bootstrap: to make it responsive  
+
+4. why use bootstrap ?
+
+The main reason to use bootstarp is to make website responsive 
+So, This website can run on any device 
+
+5. if examiner ask you how many days you took to build this website ?
+
+It took near about a week in a way 1-2 days take designing part 
+3rd day html part
+4-5 day css part 
+6-7 day js part 
+any after that i made may updation like changing text colors and other stuff 
+
+
+Some technical question these
+
+6. what is html ?  
+
+HTML (Hypertext Markup Language): HTML is the standard markup language used to create and design web pages. 
+It structures content on the internet using a system of elements or tags, 
+defining the various parts of a webpage such as headings, paragraphs, images, links, and more.
+
+7. what is css ?
+
+CSS (Cascading Style Sheets): CSS is a styling language used in conjunction with HTML to control the presentation and layout of web pages. 
+It allows developers to define the visual appearance of HTML elements, 
+specifying attributes like colors, fonts, spacing, and 
+positioning to enhance the overall design and user experience.
+
+8. what is javascript ?
+
+JavaScript: JavaScript is a versatile programming language that enables dynamic and interactive behavior in web pages. 
+It runs in web browsers and is commonly used to create responsive and engaging user interfaces, handle events, 
+and interact with server-side components, making web applications more dynamic and user-friendly.
+
+9. what is cloud computing ?
+
+Cloud Computing: Cloud computing is a technology that allows users to access and use computing resources 
+(such as servers, storage, databases, networking, software) over the internet, 
+rather than relying on a local server or personal computer. 
+It offers scalability, flexibility, and cost-effectiveness for businesses and individuals by providing on-demand access to resources.
+
+10. what is bootstrap ?
+
+Bootstrap: Bootstrap is a popular open-source front-end framework that simplifies and accelerates the process of web development. 
+It provides a collection of pre-designed and responsive HTML, CSS, and JavaScript components, 
+making it easier for developers to create consistent and visually appealing websites or web applications that work well on various devices and screen sizes.
+
+11. what is API?
+
+An API (Application Programming Interface) is a set of rules and protocols that 
+allows different software applications to communicate and interact with each other. 
+It defines methods and data formats for requesting and exchanging information between software components or services.

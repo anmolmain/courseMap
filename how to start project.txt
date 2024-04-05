@@ -1,0 +1,23 @@
+1. first of all you need a internet connection
+
+2. there are two way to start/run project on any device
+ 
+	first is use link http://webcoursemap.netlify.app
+	second is use localserver
+
+3. How to use localserver ?
+	install any coding compiler like VScode, or sublime text
+	VScode is recommended 
+
+4. install vscode and run it 
+5. go to file in vs code on top left corner 
+6. select open folder 
+7. select the folder where your project is located 
+8. now you see your project is selected 
+
+now how to start localhost
+
+install an extention called ( live server ) in vscode
+on left side there is icon with 4 box click and search live server
+when it completes installing 
+then you see bottom right corner a ( Golive ) option just click and your website will open
